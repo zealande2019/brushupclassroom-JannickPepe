@@ -20,15 +20,18 @@ namespace ClassRoom
             minklasse.KlasseNavn = "3B";
             minklasse.SemesterStart = new DateTime(2018, 4, 9);
             minklasse.KlasseListe.Add(Jannick);
-
+            minklasse.KlasseListe.Add(Nikolai);
 
             Console.WriteLine(Jannick.navn + " " + + Jannick.fødselsmåned + " " + Jannick.fødselsdag + " " 
                 + minklasse.KlasseNavn + " " + minklasse.SemesterStart.ToString("yyyy-MM-dd"));
 
             Console.WriteLine(Nikolai.navn + " " + + Nikolai.fødselsmåned + " " + "" + Nikolai.fødselsdag + " "
                 + minklasse.KlasseNavn + " " + minklasse.SemesterStart.ToString("yyyy-MM-dd"));
-
-            Console.WriteLine(Nikolai.Seasons());
+            
+            foreach(Studerende x in minklasse.KlasseListe)
+            {
+                Console.WriteLine("Klasseliste" + " " + x.navn);
+            }
 
             Console.ReadLine();
 

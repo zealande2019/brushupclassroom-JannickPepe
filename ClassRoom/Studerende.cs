@@ -24,27 +24,10 @@ namespace ClassRoom
 
         }
          
-        public string Seasons()
+       public string Seasons()
         {
-            int month = this.fødselsmåned;
-            string x = "DEFAULT";
-            if (month == 12 || month == 1 || month == 2)
-            {
-               x = "vinter";
-            }
-            if (month == 3 || month == 4 || month == 5)
-            {
-                x = "forår";
-            }
-            if (month == 6 || month == 7 || month == 8)
-            {
-                x = "sommer";
-            }
-            if (month == 9 || month == 10 || month == 11)
-            {
-                x = "eftår";
-            }
-            return x;
+            
+            return "season";
         }
 
        
