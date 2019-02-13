@@ -18,16 +18,37 @@ namespace ClassRoom
         {
             //Her forbinder vi parameterne til proberties
             this.navn = Navn;
-            this.fødselsmåned = Fødselsmåned;
             this.fødselsdag = Fødselsdag;
-            
+            if (Fødselsmåned > 0 && Fødselsmåned < 13)
+                this.fødselsmåned = Fødselsmåned;
+            else
+                this.fødselsmåned = 1;
 
         }
          
        public string Seasons()
         {
-            
-            return "season";
+            int month = this.fødselsmåned;
+            string x = "Kan ikke vises";
+
+            if (month == 1 || month == 2 || month == 12)
+            {
+                x = "vinter";
+            }
+            if (month >= 3 && month <= 5)
+            {
+                x = "Forår";
+            }
+            if (month >= 6 && month <= 8)
+            {
+                x = "Sommer";
+            }
+            if (month >= 9 && month <= 11)
+            {
+                x = "Efterår";
+            }
+            return (this.navn + " er født i " + x);
+
         }
 
        
